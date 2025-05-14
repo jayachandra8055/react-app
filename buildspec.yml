@@ -22,7 +22,7 @@ phases:
       - echo Build completed on `date`
       - docker push 818364498822.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       - echo Writing image definitions...
-      - printf '[{"name":"react-login-app","imageUri":"%s"}]' 818364498822.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"react-app","imageUri":"%s"}]' 818364498822.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
